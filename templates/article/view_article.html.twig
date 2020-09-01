@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block body %}
+    <section class="view-article">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-8">
+                    <article>
+                        <h2>{{ article.title }}</h2>
+                        {{ article.content|raw }}...
+                        <br>
+                        <br>
+                        <a class="btn btn-primary"
+                           href="{{ path('view_article', { slug: article.slug }) }}">Czytaj
+                            dalej</a>
+                    </article>
+                </div>
+                <div class="col-sm-12 col-lg-2">
+                    Side panel
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

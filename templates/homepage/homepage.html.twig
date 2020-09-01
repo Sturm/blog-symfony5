@@ -20,10 +20,13 @@
                     {% for article in articles %}
                         <article>
                             <h2>{{ article.title }}</h2>
+                            <small class="text-muted">{{ article.createdAt|date('Y-m-d') }}</small>
                             {{ article.content|slice(0,200)|raw }}...
                             <br>
                             <br>
-                            <a class="btn btn-primary" href="/">Czytaj dalej</a>
+                            <a class="btn btn-primary"
+                               href="{{ path('view_article', { slug: article.slug }) }}">Czytaj
+                                dalej</a>
                         </article>
                     {% endfor %}
                 </div>

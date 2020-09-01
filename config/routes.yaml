@@ -2,3 +2,8 @@ homepage:
   path: /
   controller: App\Controller\HomepageController::homepage
   methods: GET
+
+view_article:
+  path: /article/{slug}
+  controller: App\Controller\ArticleController::viewArticle
+  methods: GET

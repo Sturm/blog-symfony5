@@ -18,3 +18,15 @@ nav {
 a.btn {
   font-size: 1.6rem;
 }
+
+.btn-primary, .btn-primary:focus, .btn-primary:active {
+  background-color: hsl(290, 67%, 42%);
+  border-color: hsl(290, 67%, 52%) !important;
+}
+.btn-primary:focus{
+  box-shadow: 0 0 0 0.2rem rgba(155, 35, 179, .25)
+}
+
+.btn-primary:hover {
+  background-color: hsl(290, 67%, 32%);
+}
