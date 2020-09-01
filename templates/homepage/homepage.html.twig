@@ -15,7 +15,7 @@
     </section>
     <section class="homepage">
         <div class="container">
-            <div class="row">
+            <aside class="row">
                 <div class="col-sm-12 col-md-8 col-lg-8">
                     {% for article in articles %}
                         <article>
@@ -30,10 +30,14 @@
                         </article>
                     {% endfor %}
                 </div>
-                <div class="col-sm-12 col-lg-2">
-                    Side panel
-                </div>
-            </div>
+                <aside class="col-sm-12 col-lg-4 text-center">
+                    <img src="{{ asset('build/img/hubert-rzadzinski.jpeg') }}"
+                         class="img-fluid rounded-circle aside-img mb-4">
+                    <h2>Hubert Rządziński</h2>
+                    <small class="text-muted">Programista PHP oraz Javascript</small>
+
+                </aside>
+        </div>
         </div>
     </section>
 {% endblock %}

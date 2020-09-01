@@ -22,11 +22,23 @@ a.btn {
 .btn-primary, .btn-primary:focus, .btn-primary:active {
   background-color: hsl(290, 67%, 42%);
   border-color: hsl(290, 67%, 52%) !important;
+  outline: none;
 }
-.btn-primary:focus{
+
+.btn-primary:focus, .btn-primary:hover {
   box-shadow: 0 0 0 0.2rem rgba(155, 35, 179, .25)
 }
 
 .btn-primary:hover {
   background-color: hsl(290, 67%, 32%);
+}
+
+footer {
+  margin-bottom: 60px;
+}
+
+.aside-img{
+  height: 200px;
+  display: block;
+  margin: auto;
 }
