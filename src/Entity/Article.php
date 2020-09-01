@@ -54,7 +54,7 @@ class Article
     public function computeSlug(SluggerInterface $slugger)
     {
         if (!$this->slug || "-" === $this->slug) {
-            $this->slug = (string) $slugger->slug((string) $this)->lower();
+            $this->slug = (string)$slugger->slug((string)$this)->lower();
         }
     }
 
@@ -124,7 +124,7 @@ class Article
         return $this->photoFilename;
     }
 
-        public function setPhotoFilename(?string $photoFilename): self
+    public function setPhotoFilename(?string $photoFilename): self
     {
         $this->photoFilename = $photoFilename;
 

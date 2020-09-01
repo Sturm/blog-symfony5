@@ -3,5 +3,11 @@
 {% block title %}Hello HomepageController!{% endblock %}
 
 {% block body %}
-Homepage
+    <h1>Homepage</h1>
+    {% for article in articles %}
+        <article>
+            <h2>{{ article.title }}</h2>
+            {{ article.content|raw }}
+        </article>
+    {% endfor %}
 {% endblock %}
