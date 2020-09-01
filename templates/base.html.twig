@@ -1,18 +1,40 @@
+{% set currentRoute = app.request.attributes.get('_route') %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="https://img.icons8.com/color/48/000000/process--v1.png">
+        <link rel="icon" href="{{ asset('build/img/favicon.png') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
     <body>
-        <nav>
-            Blog
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Hubert Rządziński</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link {% if currentRoute == 'homepage' %}active{% endif %}" href="{{ path('homepage') }}">Strona główna</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Artykuły</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">O mnie</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        {% block body %}{% endblock %}
+        <main>
+            {% block body %}{% endblock %}
+        </main>
         <footer>
             <a href="https://icons8.com/icon/13460/php">Process icon by Icons8</a>
         </footer>
