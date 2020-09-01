@@ -8,6 +8,13 @@ body {
   font-size: 1.6rem;
 }
 
-nav .navbar-brand {
-  font-size: 1.8rem;
+nav {
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}
+
+a.btn {
+  font-size: 1.6rem;
 }

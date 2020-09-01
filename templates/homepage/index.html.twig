@@ -13,14 +13,17 @@
             <h1>Blog o programowaniu</h1>
         </div>
     </section>
-    <section>
+    <section class="homepage">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-8 col-lg-8">
                     {% for article in articles %}
                         <article>
                             <h2>{{ article.title }}</h2>
-                            {{ article.content|raw }}
+                            {{ article.content|slice(0,200)|raw }}...
+                            <br>
+                            <br>
+                            <a class="btn btn-primary" href="/">Czytaj dalej</a>
                         </article>
                     {% endfor %}
                 </div>
